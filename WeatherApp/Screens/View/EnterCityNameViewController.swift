@@ -15,6 +15,8 @@ class EnterCityNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Search Forecast"
+        self.navigationController?.navigationBar.tintColor = .white
         setUpView()
     }
     

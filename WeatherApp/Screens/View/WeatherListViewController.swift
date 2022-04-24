@@ -9,8 +9,6 @@ class WeatherListViewController: UIViewController {
     let CELL_IDENTIFIER = "WeatherCellIdentifier"
     
     @IBOutlet var tableViewWeatherList: UITableView!
-    @IBOutlet weak var buttonBack: UIButton!
-    @IBOutlet weak var labelCityName: UILabel!
     
     var cityName: String? = nil
     
@@ -23,14 +21,8 @@ class WeatherListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpView()
+        self.title = cityName?.capitalized
         setUpViewModel()
-    }
-
-    // MARK: - Set Up View
-    
-    func setUpView() {
-        labelCityName.text = cityName
     }
 
     // MARK: - Set Up View Model
@@ -92,7 +84,7 @@ extension WeatherListViewController: UITableViewDelegate {
         weatherDisplayViewController.cityName = cityName
         let weatherModel = viewModel.weatherCellViewModels[indexPath.row]
         weatherDisplayViewController.weatherModel = weatherModel
-        self.navigationController?.pushViewController(weatherDisplayViewController, animated: false)
+        self.navigationController?.pushViewController(weatherDisplayViewController, animated: true)
     }
 }
 

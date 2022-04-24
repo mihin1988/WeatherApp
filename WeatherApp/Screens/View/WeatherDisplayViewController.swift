@@ -8,8 +8,6 @@ import Foundation
 import UIKit
 
 class WeatherDisplayViewController: UIViewController {
-    @IBOutlet weak var buttonBack: UIButton!
-    @IBOutlet weak var labelCityName: UILabel!
     @IBOutlet weak var labelTemperature: UILabel!
     @IBOutlet weak var labelFeelsLikeTemp: UILabel!
     @IBOutlet weak var labelWeatherMain: UILabel!
@@ -28,7 +26,7 @@ class WeatherDisplayViewController: UIViewController {
     // MARK: - Set Up View
     
     func setUpView() {
-        labelCityName.text = cityName
+        self.title = "Forecast Details"
         labelWeatherMain.text = weatherModel?.weather
         labelWeatherDescription.text = weatherModel?.weatherDescription
         labelTemperature.text = weatherModel?.temperature

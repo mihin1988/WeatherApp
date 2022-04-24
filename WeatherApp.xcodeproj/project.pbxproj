@@ -135,9 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				54542F84281283900083D670 /* Cell */,
+				54542F82281270E40083D670 /* EnterCityNameViewController.swift */,
 				54542F752811C0A70083D670 /* WeatherListViewController.swift */,
 				54542F782811C0A70083D670 /* WeatherDisplayViewController.swift */,
-				54542F82281270E40083D670 /* EnterCityNameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
